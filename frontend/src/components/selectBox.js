@@ -2,14 +2,14 @@ import styled from "styled-components"
 import { useState } from "react"
 
 const MainContainer = styled.div`
-  margin: 8px;
+  margin: 20px 8px;
   text-align: center;
 `
 
 const QuestionContainer = styled.div`
   margin: 16px 0;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 `
 
 const InputContainer = styled.div`
@@ -23,12 +23,13 @@ const Input = styled.div`
   display: inline-block;
   box-sizing: border-box;
   margin: 0 4px;
+  transition: 0.3s;
 
   &.zero {
-    width: 16px;
-    height: 16px;
-    border-radius: 8px;
-    border: 1px solid #bbbbbb !important;  
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    border: 2px solid #bbbbbb !important;  
   }
 
   &.zero:hover, &.zero.selected {
@@ -36,19 +37,19 @@ const Input = styled.div`
   }
 
   &.one {
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
   }
 
   &.two {
-    width: 24px;
-    height: 24px;
-    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
   }
 
   &.green {
-    border: 1px solid green;
+    border: 2px solid green;
   }
 
   &.green:hover, &.green.selected {
@@ -56,7 +57,7 @@ const Input = styled.div`
   }
 
   &.red {
-    border: 1px solid red;
+    border: 2px solid red;
   }
 
   &.red:hover, &.red.selected {
