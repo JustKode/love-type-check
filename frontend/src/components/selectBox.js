@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { useState } from "react"
 
 const MainContainer = styled.div`
-  margin: 20px 8px;
+  margin: 40px 8px;
   text-align: center;
 `
 
@@ -15,14 +15,18 @@ const QuestionContainer = styled.div`
 const InputContainer = styled.div`
   font-size: 12px;
   font-weight: bold;
-  line-height: 20px;
-  vertical-align: middle;
+  height: 40px;
+  line-height: 40px;
+`
+
+const MiddleWrapper = styled.span`
+  vertical-align: top;
 `
 
 const Input = styled.div`
   display: inline-block;
   box-sizing: border-box;
-  margin: 0 4px;
+  margin: 0 8px;
   transition: 0.3s;
 
   &.zero {
@@ -90,7 +94,7 @@ export default function SelectBox({id, question, setState}) {
         {question}
       </QuestionContainer>
       <InputContainer>
-        동의 {inputs} 비동의
+        <MiddleWrapper>동의</MiddleWrapper> {inputs} <MiddleWrapper>비동의</MiddleWrapper>
       </InputContainer>
     </MainContainer>
   )

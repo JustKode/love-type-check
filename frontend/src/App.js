@@ -48,8 +48,11 @@ const ButtonContainer = styled.div`
 `
 
 const SubmitButton = styled.button`
-  padding: 4px 8px;
+  margin-top: 20px;
+  padding: 6px 12px;
+  font-size: 18px;
   border: none;
+  border-radius: 4px;
   color: white;
   background-color: black;
 `
@@ -78,7 +81,11 @@ function App() {
       return
     }
 
-    const type = type_check(selects)
+    const result = type_check(selects)
+    const type = result[0][1] + "-" + result[1][1]
+
+    console.log(result)
+
     let contents
 
     for (let i = 0; i < result_data.length; i++) {
@@ -88,7 +95,7 @@ function App() {
       }
     }
 
-    setResult(<ResultBox type={type} contents={contents}/>)
+    setResult(<ResultBox type={type} contents={contents} result={result}/>)
   }
 
   return (
