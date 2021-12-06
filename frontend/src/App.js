@@ -31,6 +31,7 @@ const DescriptionContainer = styled.div`
   margin: 8px;
   font-size: 16px;
   padding: 20px;
+  text-align: center;
 `
 
 const SelectBoxContainer = styled.div`
@@ -103,7 +104,12 @@ function App() {
       <SubContainer>
         <TitleContainer>AI로 보는 사랑의 유형 테스트</TitleContainer>
         <DescriptionContainer>
-          AI로 보는 사랑의 유형 테스트
+          해당 테스트는 <strong>에리히 프롬의 [사랑의 기술]</strong>의 이론을 기반하여 제작 되었습니다. <br/><br/>
+          나의 경험과 의미를 중요시 하는 <strong>생산의 사랑</strong><br/>
+          연인간의 의존 관계를 중요시 하는 <strong>공생의 사랑</strong><br/>
+          감각적인 요소들을 중요시 하는 <strong>쾌락의 사랑</strong><br/>
+          상대방과의 신뢰를 중요시 하는 <strong>소유의 사랑</strong><br/><br/>
+          이 테스트를 통해, 당신의 <strong>사랑의 유형</strong>을 <strong>테스트</strong> 해 보세요!
         </DescriptionContainer>
         <SelectBoxContainer>
           {questions}
